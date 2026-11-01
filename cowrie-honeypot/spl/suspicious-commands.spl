@@ -1,0 +1,5 @@
+index=cowrie earliest=-24h eventid="cowrie.command.input"
+| where match(input,"(?i)(wget|curl|nc |ncat|netcat|chmod|/dev/tcp|base64|useradd|passwd|crontab)")
+| stats count as suspicious_commands values(input) as commands by src_ip
+| where suspicious_commands >= 1
+| sort - suspicious_commands

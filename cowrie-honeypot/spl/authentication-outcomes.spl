@@ -1,0 +1,4 @@
+index=cowrie earliest=-24h eventid IN ("cowrie.login.success","cowrie.login.failed")
+| stats count by eventid
+| eval Result=if(eventid="cowrie.login.success","Successful Logins","Failed Logins")
+| fields Result count

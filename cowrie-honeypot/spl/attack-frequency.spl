@@ -1,0 +1,3 @@
+index=cowrie earliest=-24h src_ip="<SOURCE_IP>" eventid="cowrie.login.failed"
+| timechart span=15s count as failed_attempts
+| where failed_attempts > 0

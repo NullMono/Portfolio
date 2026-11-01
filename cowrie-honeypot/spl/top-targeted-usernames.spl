@@ -1,0 +1,4 @@
+index=cowrie earliest=-24h eventid="cowrie.login.failed"
+| stats count as attempts by username
+| sort - attempts
+| head 10

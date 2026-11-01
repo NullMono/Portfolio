@@ -1,0 +1,5 @@
+index=cowrie earliest=-24h src_ip="<SOURCE_IP>" eventid="cowrie.login.failed"
+| stats count as failed_attempts dc(session) as unique_sessions min(_time) as first_seen max(_time) as last_seen by src_ip username
+| eval duration_seconds=round(last_seen-first_seen,2)
+| eval attempts_per_minute=if(duration_seconds>0,round(failed_attempts/(duration_seconds/60),2),0)
+| convert ctime(first_seen) ctime(last_seen)
