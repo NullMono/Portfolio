@@ -195,7 +195,7 @@ Add sanitized dashboard screenshots to `evidence/` if desired. The evidence fold
 
 - I will be updating this repo with new findings periodically
 
-## Authora
+## Author
 
 Ethan Miranda — Cybersecurity / SOC portfolio lab.
 
