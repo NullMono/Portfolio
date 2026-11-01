@@ -1,0 +1,29 @@
+case_id,indicator_type,indicator_value_defanged,context,confidence,status,notes
+PHISH-2026-001,domain,mail[.]montgomeryvideos[.]com,From and DKIM/Return-Path domain,high,observed,Authentication passed for this sending domain; legitimacy not established
+PHISH-2026-001,domain,montgomeryvideos[.]com,Message-ID and List-Unsubscribe domain,high,observed,Reputation not verified; do not click unsubscribe
+PHISH-2026-001,ipv4,162[.]35[.]176[.]135,Google-observed SMTP source IP,high,observed,Reputation not verified
+PHISH-2026-001,domain,bocaratonawnings[.]com,Remote images and click-through links,high,observed,Off-brand HTTP host; final redirect and maliciousness unverified
+PHISH-2026-002,domain,kogiacvk[.]aacf[.]profitlabs[.]me,From and DKIM domain,high,observed,Unverified sender domain; authentication pass does not prove brand legitimacy
+PHISH-2026-002,domain,aacf[.]profitlabs[.]me,Return-Path and List-Unsubscribe domain,high,observed,Unverified; unsubscribe URL not opened
+PHISH-2026-002,ipv4,104[.]247[.]173[.]252,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-002,domain,www[.]smartads[.]clarin[.]com,Peer hostname reported in Google-added Received header,medium,observed,Hostname/IP relationship is recorded as supplied; reputation not checked
+PHISH-2026-002,domain,storage[.]googleapis[.]com,HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched; do not block the entire service based on this sample
+PHISH-2026-003,domain,ewhzt[.]vkb,Visible From domain,high,observed,Unverified sender domain; DKIM failed
+PHISH-2026-003,domain,one[.]ass0031[.]behinddesert[.]biz[.]ua,Sender and Return-Path domain,high,observed,Unverified infrastructure domain
+PHISH-2026-003,ipv4,212[.]83[.]161[.]56,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-003,domain,dfusion[.]toms[.]com,Peer hostname in Google-added Received header,medium,observed,Reputation not checked
+PHISH-2026-003,domain,storage[.]googleapis[.]com,HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched
+PHISH-2026-003,domain,odrsjml[.]com,List-Unsubscribe and List-Archive host,high,observed,Unverified; not opened
+PHISH-2026-004,domain,fpwczucb[.]google[.]xelvoranavigate[.]com[.]tr,"Visible From, Sender, and DKIM domain",high,observed,Unverified domain; authentication does not establish Walmart affiliation
+PHISH-2026-004,domain,google[.]xelvoranavigate[.]com[.]tr,Return-Path and List-Unsubscribe domain,high,observed,Unverified sender/list domain
+PHISH-2026-004,ipv4,185[.]227[.]136[.]149,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-004,domain,agentevirtual[.]ticket[.]com[.]br,Peer hostname in Google-added Received header,medium,observed,Reputation not checked
+PHISH-2026-004,domain,storage[.]googleapis[.]com,Main HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched
+PHISH-2026-004,domain,tinyurl[.]com,Shortened URL host embedded in HTML,high,observed,Destination not expanded; exact token redacted
+PHISH-2026-005,domain,bfjww[.]svg,Visible From domain,high,observed,Unverified domain; displayed identity claims Gmail Support
+PHISH-2026-005,domain,one[.]bss0021[.]pepsilululemon[.]biz[.]ua,Sender and Return-Path domain,high,observed,Unverified sender infrastructure
+PHISH-2026-005,domain,164[.]232081[.]7k8d[.]one[.]bss0021[.]pepsilululemon[.]biz[.]ua,DKIM signing identity,medium,observed,Signature passes for this identity; brand legitimacy not established
+PHISH-2026-005,ipv4,212[.]83[.]137[.]128,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-005,domain,blog[.]capodarte[.]com[.]br,Peer hostname in Google-added Received header,medium,observed,Reputation not checked
+PHISH-2026-005,domain,storage[.]googleapis[.]com,Main HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched
+PHISH-2026-005,domain,qvxmsui[.]com,List-Unsubscribe and List-Archive host,high,observed,Unverified; not opened

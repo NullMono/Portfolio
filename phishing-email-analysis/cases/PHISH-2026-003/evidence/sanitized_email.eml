@@ -1,0 +1,233 @@
+Delivered-To: [REDACTED_EMAIL]
+Received: by 2002:a05:6200:20e:b0:669:e595:5353 with SMTP id db14csp3138493qnb;
+        Fri, 30 Oct 2026 20:12:58 -0700 (PDT)
+X-Received: by 2002:a05:6000:2488:b0:48e:10a7:438 with SMTP id ffacd0b85a97d-48e6e2ff172mr9845637f8f.36.1793416378630;
+        Fri, 30 Oct 2026 20:12:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1793416378; cv=none;
+        d=google.com; s=arc-20260327;
+        b=QhLc73LpWbTp8oA1mYsrfr5SG4D0mdmTWDByVDeJmEKiA8c6V5a3+WI3KQk7LZbwL4
+         bYtdCuhqy5SXwg+qWCA/tuNRTGsUJiQIaU+4hQYKZ9EAFt8TBKhGlIvjgfDyg6Xf4NSO
+         HIBcuaW5MT612zzfBpnk+HhyRm+Tt5IqGyebfbRBn/pq4H1oAboDNOPQSchsrPq3kc+s
+         JQb26rylgAuNs2vop0CZhD1dRc1zvRpCVL2c65QeTB2uLnEZRCyK5LzucJBCiUU0Gln7
+         JcP6/N2Csx8LDwB03nNyAQCCAQqAjl3GkaRGDpmQ4shVHGfOKu/NGHd2BMKmhLC25IsJ
+         mU1A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=message-id:feedback-id:list-unsubscribe-post:list-archive
+         :list-unsubscribe:list-owner:list-id:date:subject:from:sender:to
+         :delivered-to:domainkey-signature:dkim-signature;
+        bh=OE0nvaOHQ+oNqgcy3w5ZddrnBKv3AJIHtodveZvMSgA=;
+        fh=spbIwN/qEDxzsSkc/u01W/1l6LwIchqgp/4JXwO1tgw=;
+        b=NBG8VVNHkbzAMgUCD0pSO7TlB6QvbyFuKMJLMNfVHtgs0YvIPmgQK0ICu5ihB5Bupw
+         Fh+RGBL8BKJ9M1CDacKGVvg/PDBEHhwBCaBh+Z82FZSO2A1oFDYyVSVVql8gLkcB7CCU
+         gkfzLhKYXWb5nBnDeLTVQFPD0UwqrbYasTKeT6tJ5x0lEAw5foadfJ7ShIZaYN96ke1E
+         N3EPT8EOF8cy/NkcjQEw0tmMAcZVTQ5+EknUTLu4zxW8yU4bOsqbx2Ucbhp1wkbWNJTc
+         EcB0Muq9E10OaZTGmEui7Em05gNI/hhIuVQylVZA6oRqcCDAda5Y8JH7JlORGh2U94om
+         yaEw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=fail header.i=@164.232081.Kv26.one.ass0031.behinddesert.biz.ua header.s=mail header.b=WISr5Xep;
+       spf=pass (google.com: domain of [REDACTED_EMAIL] designates 212.83.161.56 as permitted sender) smtp.mailfrom=[REDACTED_EMAIL]
+Return-Path: <[REDACTED_EMAIL]>
+Received: from one.ass0031.behinddesert.biz.ua (dfusion.toms.com. [212.83.161.56])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-48e71bb75afsi7656520f8f.222.2026.10.30.20.12.53
+        for <[REDACTED_EMAIL]>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Fri, 30 Oct 2026 20:12:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [REDACTED_EMAIL] designates 212.83.161.56 as permitted sender) client-ip=212.83.161.56;
+Authentication-Results: mx.google.com;
+       dkim=fail header.i=@164.232081.Kv26.one.ass0031.behinddesert.biz.ua header.s=mail header.b=WISr5Xep;
+       spf=pass (google.com: domain of [REDACTED_EMAIL] designates 212.83.161.56 as permitted sender) smtp.mailfrom=[REDACTED_EMAIL]
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=164.232081.Kv26.one.ass0031.behinddesert.biz.ua;
+ h=To:Sender:From:Subject:Date:List-Id:List-Owner:List-Unsubscribe:List-Archive:Message-ID:Content-Type; i=[REDACTED_EMAIL];
+ bh=/d581wXacgld05QkO/xBQ+1ccOo=;
+ b=WISr5XepVAEa1jqo81oIZVCkOdZz7/FtGxyzFzfEbZlnIygI09BHSTkOOCOvLPkQpo/P5AJJ5hRD
+   lQ5CSDdi0dE5oIYvZc/oxMMUsBqMmS4v99tU0N0w7MX3jfGoI8qUeE8e8U+YOOEnKqqHogkazpH1
+   vhtfxaZRXNbFWswW3oWh47544/WpEC0R+WZt6kwiuNBdRA8HJotGS5yHyQQr0mlAA3AqzAo1tUx6
+   S+MTrwhqnqVpVyo5s0spQl6nuRkyiNNI71+sGzTg3zllIvLKTv3JmhZyLdjcG8hJEz9VufR6j0wr
+   kD7MF7jmZev6s15K0tWXHwbzEKf/Mt2McD+hmQ==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=164.232081.Kv26.one.ass0031.behinddesert.biz.ua;
+ b=RgicP7wVQGmMFIQjp/11HHEUb+V8zPHzsML2fpKqrJasDjt+XcIWDZ4gj0lPfWjTKSjlvm7BMRX/
+   +k2GdWCDxgXAOnCH88tURF9dEdLH58dP8Bb3CA39udUGnCvnHwdDMkt4I8jBQk3AA52c6MWUlipM
+   vyIjiCPisrhw/OIfxrwX9VaqKPE8FLxuPQNsxWunhEVBDnHr8LtXcEV8eJwccOco4u0qIWBpCwhp
+   RfNYTLllUTMkANqbqOvdaeCTg446yEXzb0GWsODkq5bfPuNQ/G3dAzpWl7wGQeaq4R+ceJlzfcmb
+   ltje4qbjOlRkus7nHtQqzTrCsEPRDjCuaWz0Bg==;
+Delivered-To: me@tXJ1t.cb
+Received: from mg-202-170.substack.com (mg-202-170.substack.com. [161.38.202.170])javascript:void(0);
+Received: from spruce-goose-ax.twitter.com (spruce-goose-ax.twitter.com. [199.59.150.93])
+Received: by 05b6d0824c04 with HTTP id 6797d9ff72e7a49eccb1a107; Sat, 31 Oct 2026 02:48:59 +0100
+X-Mailgun-Sid: >>?act=cl&pid=33531_md&uid=4&vid=2410426&ofid=397&lid=164&cid=232081<<
+To: me@tXJ1t.cb
+Sender: [REDACTED_EMAIL]
+From:  REDACTED_USER <alert-164-232081@ewhzt.vkb>
+Subject: We've Blocked Your Account! Your photos and videos will be deleted on 31-10-2026
+Date: Sat, 31 Oct 2026 02:48:59 +0100
+X-Mailgun-Tag: post
+X-Mailgun-Sending-Ip: 212.83.161.56
+List-Id: <REDACTED_USER>
+X-Mailgun-Track-Clicks: false
+List-Owner: <mailto:REDACTED_USER>
+List-Unsubscribe: <hxxps://odrsjml.com/>
+List-Archive: <hxxps://odrsjml.com/archive/>
+X-Google-Original-Message-ID: <-@gmail.com>
+X-Google-Sender-Delegation: REDACTED_USER Google
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: post-70531446:cat-post:pub-737237:substack
+X-Mailgun-Sending-Ip-Pool-Name:212.83.161.56/?act=cl&pid=33531_md&uid=4&vid=2410426&ofid=397&lid=164&cid=232081
+Message-ID: <alert-6280@ewhzt.vkb>
+Content-Type: multipart/digest; boundary="----=_Part_1_23456789"
+
+------=_Part_1_23456789
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: xogjiwRFiQ
+
+
+------=_Part_1_23456789
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: xogjiwRFiQ
+
+<div style="background-color: rgb(241,249,242)">
+      <div style="width: 5px; min-height: 30px; top: 0px; bottom: 0px; background-color: rgb(86,166,89)">
+        <p style="font-size: 13px; font-family: wf_segoe-ui_normal, Segoe UI, Segoe WP, Tahoma, Arial, sans-serif; width: 500px;; font-weight: normal; color: black; padding-bottom: 5px; padding-top: 5px; padding-left: 15px">
+          -This message was sent from a trusted sender.
+</p></div></div><br><br><br>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cloud Payment Notice ⚠️</title>
+</head>
+
+<a href="hxxps://storage.googleapis.com/strow/strw-v1-cl1.html" style="text-decoration: none;">
+
+<body style="margin:0; padding:0; background-color:#f4f7f6; font-family: 'Segoe UI', Arial, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f7f6; padding:30px 0;">
+    <tr>
+        <td align="center">
+            
+            <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-radius:16px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.06); border: 1px solid #e1e8ed;">
+                
+                <tr>
+                    <td style="padding:30px 40px 10px 40px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td style="font-size:22px; font-weight:bold; color:#4b00e0;">☁️ Cloud</td>
+                                <td align="right" style="font-size:13px; font-weight:bold; color:#888888; text-transform:uppercase; letter-spacing:1px;">Cloud Services</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:20px 40px 40px 40px;">
+                        
+                        <h1 style="font-size:24px; color:#111111; margin:0 0 20px 0; line-height:1.3; font-weight:800;">
+                            Payment failed for your Cloud storage renewal 🛑
+                        </h1>
+
+                        <p style="font-size:16px; color:#555555; line-height:1.6; margin:0 0 25px 0;">
+                            We couldn’t renew your Cloud storage subscription because your payment method needs to be updated. 💳
+                        </p>
+
+                        <div style="background-color:#fff1f0; border-radius:10px; padding:18px; margin-bottom:25px; border-left: 5px solid #ff4d4f;">
+                            <p style="margin:0; color:#cf1322; font-size:15px; font-weight:bold;">
+                                Your payment method has expired.
+                            </p>
+                            <p style="margin:5px 0 0 0; color:#555555; font-size:14px;">
+                                Please update your payment details to avoid service interruption.
+                            </p>
+                        </div>
+
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:25px; font-size:14px; color:#333333; background:#f9f9f9; border-radius:8px;">
+                            <tr>
+                                <td style="padding:15px 15px 5px 15px;"><strong>Subscription ID:</strong> CLDSTRG-70531446</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:5px 15px 15px 15px;"><strong>Product:</strong> Cloud Storage 📁</td>
+                            </tr>
+                        </table>
+
+                        <p style="font-size:14px; color:#666666; line-height:1.6; margin-bottom:35px;">
+                            Without enough Cloud space, you may not be able to store all your data and files in the Cloud service. This service allows you to store photos, videos, documents, and more securely and access them from any device. 🔒
+                        </p>
+
+                        <table border="0" cellspacing="0" cellpadding="0" align="center" width="100%">
+                            <tr>
+                                <td align="center" style="border-radius:10px;" bgcolor="#4b00e0">
+                                    <a href="hxxps://storage.googleapis.com/strow/strw-v1-cl1.html" target="_blank" style="font-size:17px; font-family: Arial, sans-serif; color: #ffffff; text-decoration: none; padding: 16px 0; border-radius: 10px; display: block; font-weight: bold; width:100%;">
+                                        Update payment method 🚀
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:25px 40px; background-color:#fafafa; border-top:1px solid #eeeeee; text-align:center;">
+                        <p style="font-size:12px; color:#999999; margin:0;">
+                            This message was sent automatically by Cloud Services.<br>
+                            © 2026 Cloud Services Inc. <a href="hxxps://storage.googleapis.com/strow/strw-v1-cl1.html" style="text-decoration: none;color: black">unsubscribe</a>
+                        </p>
+                       
+                    </td>
+                    
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+</table> </a>
+<br/><br/><center> 
+<span style="color:#888;font-size:11px;font-family:verdana;display:block;text-align:center;margin-top:10px">click <a href="hxxps://storage.googleapis.com/strow/strw-v1-cl1.html">here</a> to remove yourself from our emails list</span><br/><br/>
+</body>
+</html>
+
+<object style="display:none;">
+This message was sent from a trusted sender
+REDACTED_USER-?act=oop&pid=33531_md&uid=4&vid=2410426&ofid=397&lid=164&cid=232081
+They had no proof. He knew that they knew he had done it but they didn't have any proof. It was a huge distinction and it was the difference between him keeping his freedom or being locked away for decades. They continued to question him, probing him for information that they could use against him or find the proof they needed to put him away. He smiled and continued to block their every inquiry by feigning his innocence for a crime they all knew he committed.
+
+
+She tried to explain that love wasn't like pie. There wasn't a set number of slices to be given out. There wasn't less to be given to one person if you wanted to give more to another. That after a set amount was given out it would all disappear. She tried to explain this, but it fell on deaf ears.
+
+
+Twenty seconds were all that was left and Richard could hear each one tick by. Fifteen seconds now remained and the panic began to fully set in. Ten seconds and he wasn't sure he had enough time. Five seconds, four, three, two, one...
+
+He had done everything right. There had been no mistakes throughout the entire process. It had been perfection and he knew it without a doubt, but the results still stared back at him with the fact that he had lost.
+
+
+Sometimes there isn't a good answer. No matter how you try to rationalize the outcome, it doesn't make sense. And instead of an answer, you are simply left with a question. Why?
+
+I've rented a car in Las Vegas and have reserved a hotel in Twentynine Palms which is just north of Joshua Tree. We'll drive from Las Vegas through Mojave National Preserve and possibly do a short hike on our way down. Then spend all day on Monday at Joshua Tree. We can decide the next morning if we want to do more in Joshua Tree or Mojave before we head back.
+
+The rain was coming. Everyone thought this would be a good thing. It hadn't rained in months and the earth was dry as a bone. It wasn't a surprise that everyone thought a good rain was what was needed, but they never expected how much rain would actually arrive.
+
+
+She wondered if the note had reached him. She scolded herself for not handing it to him in person. She trusted her friend, but so much could happen. She waited impatiently for word.
+
+
+Brenda never wanted to be famous. While most of her friends dreamed about being famous, she could see the negative aspects that those who wanted to be famous seemed to ignore. The fact that you could never do anything in public without being mobbed and the complete lack of privacy was something that she never wanted to experience. She also had no desire to have strangers speculating about every aspect of her life and what each thing she did was supposed to mean. Brenda was perfectly happy with her anonymous life where she could do exactly as she wanted without anyone else giving a damn. Thus, her overnight Internet celebrity was not something she was thrilled about as her friends told her how lucky she was.
+
+The robot clicked disapprovingly, gurgled briefly inside its cubical interior and extruded a pony glass of brownish liquid. "Sir, you will undoubtedly end up in a drunkard's grave, dead of hepatic cirrhosis," it informed me virtuously as it returned my ID card. I glared as I pushed the glass across the table.
+
+He sat across from her trying to imagine it was the first time. It wasn't. Had it been a hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until he caught himself and again tried to imagine it was the first time.REDACTED_USER-?act=oop&pid=33531_md&uid=4&vid=2410426&ofid=397&lid=164&cid=232081
+
+</object>		
+
+------=_Part_1_23456789
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<object style="display:none;">
+This message was sent from a trusted sender
+<div style="font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"> ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ? </div>
+She tried to explain that love wasn't like pie. There wasn't a set number of slices to be given out. There wasn't less to be given to one person if you wanted to give more to another. That after a set amount was given out it would all disappear. She tried to explain this, but it fell on deaf ears.
+I've rented a car in Las Vegas and have reserved a hotel in Twentynine Palms which is just north of Joshua Tree. We'll drive from Las Vegas through Mojave National Preserve and possibly do a short hike on our way down. Then spend all day on Monday at Joshua Tree. We can decide the next morning if we want to do more in Joshua Tree or Mojave before we head back.
+Symptoms of acute mountain sickness, or AMS as it’s known, include trouble sleeping, nausea, loss of appetite, and fatigue. If you keep going higher and ignore signals from your body, you could develop HAPE, high altitude pulmonary edema, or HACE, high altitude cerebral edema, both of which are very serious.
+They had no proof. He knew that they knew he had done it but they didn't have any proof. It was a huge distinction and it was the difference between him keeping his freedom or being locked away for decades. They continued to question him, probing him for information that they could use against him or find the proof they needed to put him away. He smiled and continued to block their every inquiry by feigning his innocence for a crime they all knew he committed.
+</div><object><div style="font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"> ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ? </div> </body></html>
+------=_Part_1_23456789--

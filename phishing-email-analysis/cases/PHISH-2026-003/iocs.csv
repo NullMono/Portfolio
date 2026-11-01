@@ -1,0 +1,7 @@
+case_id,indicator_type,indicator_value_defanged,context,confidence,status,notes
+PHISH-2026-003,domain,ewhzt[.]vkb,Visible From domain,high,observed,Unverified sender domain; DKIM failed
+PHISH-2026-003,domain,one[.]ass0031[.]behinddesert[.]biz[.]ua,Sender and Return-Path domain,high,observed,Unverified infrastructure domain
+PHISH-2026-003,ipv4,212[.]83[.]161[.]56,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-003,domain,dfusion[.]toms[.]com,Peer hostname in Google-added Received header,medium,observed,Reputation not checked
+PHISH-2026-003,domain,storage[.]googleapis[.]com,HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched
+PHISH-2026-003,domain,odrsjml[.]com,List-Unsubscribe and List-Archive host,high,observed,Unverified; not opened

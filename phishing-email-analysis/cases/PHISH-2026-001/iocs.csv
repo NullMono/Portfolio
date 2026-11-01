@@ -1,0 +1,5 @@
+case_id,indicator_type,indicator_value_defanged,context,confidence,status,notes
+PHISH-2026-001,domain,mail[.]montgomeryvideos[.]com,From and DKIM/Return-Path domain,high,observed,Authentication passed for this sending domain; legitimacy not established
+PHISH-2026-001,domain,montgomeryvideos[.]com,Message-ID and List-Unsubscribe domain,high,observed,Reputation not verified; do not click unsubscribe
+PHISH-2026-001,ipv4,162[.]35[.]176[.]135,Google-observed SMTP source IP,high,observed,Reputation not verified
+PHISH-2026-001,domain,bocaratonawnings[.]com,Remote images and click-through links,high,observed,Off-brand HTTP host; final redirect and maliciousness unverified

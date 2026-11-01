@@ -1,0 +1,7 @@
+case_id,indicator_type,indicator_value_defanged,context,confidence,status,notes
+PHISH-2026-004,domain,fpwczucb[.]google[.]xelvoranavigate[.]com[.]tr,"Visible From, Sender, and DKIM domain",high,observed,Unverified domain; authentication does not establish Walmart affiliation
+PHISH-2026-004,domain,google[.]xelvoranavigate[.]com[.]tr,Return-Path and List-Unsubscribe domain,high,observed,Unverified sender/list domain
+PHISH-2026-004,ipv4,185[.]227[.]136[.]149,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-004,domain,agentevirtual[.]ticket[.]com[.]br,Peer hostname in Google-added Received header,medium,observed,Reputation not checked
+PHISH-2026-004,domain,storage[.]googleapis[.]com,Main HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched
+PHISH-2026-004,domain,tinyurl[.]com,Shortened URL host embedded in HTML,high,observed,Destination not expanded; exact token redacted

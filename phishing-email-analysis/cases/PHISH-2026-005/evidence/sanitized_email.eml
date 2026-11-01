@@ -1,0 +1,228 @@
+Delivered-To: [REDACTED_EMAIL]
+Received: by 2002:a05:6200:80cf:20b0:669:e595:5353 with SMTP id 15-n2csp9991410qnx;
+        Thu, 22 Oct 2026 01:57:04 -0700 (PDT)
+X-Received: by 2002:aa7:df8f:0:b0:6b1:c285:f8d8 with SMTP id 4fb4d7f45d1cf-6b41d608004mr1240895a12.11.1792659423953;
+        Thu, 22 Oct 2026 01:57:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1792659423; cv=none;
+        d=google.com; s=arc-20260327;
+        b=imR4lXDclgfqWN7aB/fMdWWnZcqe/yUexcQUl/xl7IGUYnKCO77qH/2NzNb4q7eep5
+         SDIXD/pUe6NvZKsRhpLC/2u7a37VBhKNin9P7feEl1w0nCs3LkWEOPvG07vNOYZLnkop
+         Mu0O3MIxlnbLemd6pSjYRBXg9KEyyP3xag1GLHW2kMWqB6O1OHCq9KKiGaGWoCB1QgDN
+         f5nRSEIhpQVHh9FPzDhOCYRNVe5R8SlqeI9isohhOBlo32OkAItmRvOis+PCo8WOeNC1
+         IThwA/QZX2aKfQBiMBW5IZ5h2Bbe92R55kqcsQlJ7n3GZSamTyyuxxgTjp9/2EaVFWpK
+         Wu+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=message-id:feedback-id:list-unsubscribe-post:list-archive
+         :list-unsubscribe:list-owner:list-id:date:subject:from:sender:to
+         :delivered-to:domainkey-signature:dkim-signature;
+        bh=UXSowJGMELXqyFQJ5S2uxn3cUkbgd+pO9PnUvUmZ4KY=;
+        fh=PjK7eZIdZSM0WWJG1blTVfHdyoNkVR0lN8vDnOOraZE=;
+        b=UDN0uMVSuVRF7szVsZNnoaxZ27CaZBxwVYmYLV7o5nPp+UwqRHiXADe77aAxL4ILlO
+         +hNhw8yTT8TLgDA/tj3hWiYD7qt5donpy/rBgtCqHgsOKN/AXFWEiOlTOarlldcAknpn
+         bnov3zAytYtHKbY6BisepDrY+/Bl9eNTqXzKDfl1KnTUbXBfXLL704MDtHTa7YWRh6aN
+         wVv5JEV3zoZ75VribVZzKVLSQjowNpjI/RbkEcsu2qoLs2Bt2W5PeFEpHngNU3dM6nPx
+         5GHiyifDK1/iZMDEwWccZv34vFG+d+gAHXnwVpW6yAPmi0r/UKQiGvyvm4i2u993G6gO
+         3j8A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@164.232081.7k8d.one.bss0021.pepsilululemon.biz.ua header.s=mail header.b=UDj0AVxz;
+       spf=pass (google.com: domain of [REDACTED_EMAIL] designates 212.83.137.128 as permitted sender) smtp.mailfrom=[REDACTED_EMAIL]
+Return-Path: <[REDACTED_EMAIL]>
+Received: from one.bss0021.pepsilululemon.biz.ua (blog.capodarte.com.br. [212.83.137.128])
+        by mx.google.com with ESMTPS id 4fb4d7f45d1cf-6b402ee34fbsi4826707a12.3.2026.10.22.01.57.03
+        for <[REDACTED_EMAIL]>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Thu, 22 Oct 2026 01:57:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of [REDACTED_EMAIL] designates 212.83.137.128 as permitted sender) client-ip=212.83.137.128;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@164.232081.7k8d.one.bss0021.pepsilululemon.biz.ua header.s=mail header.b=UDj0AVxz;
+       spf=pass (google.com: domain of [REDACTED_EMAIL] designates 212.83.137.128 as permitted sender) smtp.mailfrom=[REDACTED_EMAIL]
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=164.232081.7k8d.one.bss0021.pepsilululemon.biz.ua;
+ h=To:Sender:From:Subject:Date:List-Id:List-Owner:List-Unsubscribe:List-Archive:Message-ID:Content-Type; i=[REDACTED_EMAIL];
+ bh=wS093OWGPMvC7h6yqgOTlmY2ZZU=;
+ b=UDj0AVxzy1ljR8PnBvvHk2l+0rZFuhAxvU/T+GuSfz7TQtgXr+OctoiXZiDghXBVMzSe73laChBN
+   wwJIbcWWglO8cIr+c5+MrnSGmReQuc1f5EBeU5SUYaAuuEaU6RRZmTnNUWW+72P+ufFJQWZqQlAo
+   OKOCnOLZDISHfH4BtVBrlqEwClWLfscRuAX4ItlDLystgChcpFtx7UDykLsemQfNhvKVicc2G8V0
+   wLbTJQaWuOwo3tdh4rNqHfKZBbA9de6Jddtdl+kFGE5iH8YizLjXHWUEtaMJKhjDzZyEcD5SKNsl
+   IPec84iuIEqPkAhoo2edDi4f4AhLniRHaaQVtg==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=164.232081.7k8d.one.bss0021.pepsilululemon.biz.ua;
+ b=S+ytDKzSJ92Bz+rs7xJ8bKD6K7RRnSLWpbKWolov+U76m93fA+lMe0hg6Dm2eoBE+XElKrInI+7Y
+   UXKLuTKYS+vqqW1Ia6C1JJNh7sDMjn4jQKMUD34IclYnal7KKRbMCGD4IxNOIxXyVHwdNT3FhX2K
+   z+K8swxBvj1RaVPEX75CouwBFeftcjnsQtNu6MZaImN/W/JM6bOXjHiu4ncnu3kDHBlnms2PPbH5
+   yRtrFXCXOeBGFArBVSDcO+K1wa7+9mYwxG/RhbmdOPPBovbr+wNdeiqAt8KrnWwjUXVmwLALVBt6
+   L73LisnJ00Nq6aMuBjwAI9nqf6zCaw0og1242Q==;
+Delivered-To: me@iPAKv.sc
+Received: from mg-202-170.substack.com (mg-202-170.substack.com. [161.38.202.170])javascript:void(0);
+Received: from spruce-goose-ax.twitter.com (spruce-goose-ax.twitter.com. [199.59.150.93])
+Received: by 05b6d0824c04 with HTTP id 6797d9ff72e7a49eccb1a107; Thu, 22 Oct 2026 09:53:57 +0100
+X-Mailgun-Sid: >>?act=cl&pid=32686_md&uid=2&vid=2265645&ofid=501&lid=164&cid=232081<<
+To: me@iPAKv.sc
+Sender: [REDACTED_EMAIL]
+From:  GmailSupportTeam <alert-164-232081@bfjww.svg>
+Subject: ⚠️ WARNING: Failure Notice 22-10-2026
+Date: Thu, 22 Oct 2026 09:53:57 +0100
+X-Mailgun-Tag: post
+X-Mailgun-Sending-Ip: 212.83.137.128
+List-Id: <REDACTED_USER>
+X-Mailgun-Track-Clicks: false
+List-Owner: <mailto:REDACTED_USER>
+List-Unsubscribe: <hxxps://qvxmsui.com/>
+List-Archive: <hxxps://qvxmsui.com/archive/>
+X-Google-Original-Message-ID: <-@gmail.com>
+X-Google-Sender-Delegation: REDACTED_USER Google
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: post-77087822:cat-post:pub-737237:substack
+X-Mailgun-Sending-Ip-Pool-Name:212.83.137.128/?act=cl&pid=32686_md&uid=2&vid=2265645&ofid=501&lid=164&cid=232081
+Message-ID: <alert-1524@bfjww.svg>
+Content-Type: multipart/digest; boundary="----=_Part_1_23456789"
+
+------=_Part_1_23456789
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7TbtCXnkBu
+
+------=_Part_1_23456789
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7TbtCXnkBu
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgent: Action Required to Protect Your Cloud Data</title>
+    <style>
+
+        body { margin: 0; padding: 0; background-color: #f4f7f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .wrapper { width: 100%; table-layout: fixed; background-color: #f4f7f9; padding-bottom: 40px; }
+        .main { background-color: #ffffff; margin: 20px auto; width: 100%; max-width: 600px; border-spacing: 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header-trust { background-color: #f1f9f2; border-left: 5px solid #56a659; padding: 10px 20px; font-size: 13px; color: #333; }
+        .hero { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); padding: 40px 20px; text-align: center; color: #ffffff; }
+        .content { padding: 40px 30px; line-height: 1.6; color: #444; }
+        .alert-box { background-color: #fff9f0; border: 1px solid #ffeeba; border-radius: 8px; padding: 20px; margin: 25px 0; border-left: 4px solid #ff6a00; }
+        .cta-button { background-color: #ff6a00; color: #ffffff !important; text-decoration: none; padding: 15px 35px; border-radius: 50px; display: inline-block; font-weight: bold; font-size: 16px; margin-top: 20px; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #888; line-height: 1.8; }
+        .footer a { color: #007bff; text-decoration: none; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<a href="hxxps://storage.googleapis.com/hmdbox/hmd-v1-cl3.html" style="text-decoration: none;">
+    <div class="wrapper">
+        <table width="100%" class="main" style="max-width: 600px;">
+            <tr>
+                <td class="header-trust">
+                    - This message was sent from a trusted sender.
+                </td>
+            </tr>
+        </table>
+
+        <table class="main" width="100%">
+            <tr>
+                <td class="hero">
+                    <h1 style="margin:0; font-size: 28px;">☁️ Cloud</h1>
+                    <p style="margin: 10px 0 0; opacity: 0.9;">Account Security & Subscription</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="content">
+                    <h2 style="color: #d9534f; margin-top: 0;">Urgent: Action Required</h2>
+                    <p>Dear user,</p>
+                    <p>We attempted to renew your <strong>Cloud+ subscription</strong>, but your payment method has expired. As a result, your personal data is now at risk of being <strong>permanently removed</strong> from cloud storage.</p>
+
+                    <p><strong>What you could lose:</strong></p>
+                    <ul>
+                        <li>Photos and videos stored in Cloud Photos</li>
+                        <li>Contacts, calendars, and reminders</li>
+                        <li>Notes, documents, and app data</li>
+                        <li>Device backups (iPhone, iPad, Mac)</li>
+                    </ul>
+
+                    <div class="alert-box">
+                        <strong style="color: #ff6a00; display: block; margin-bottom: 5px;">ℹ️ Final Reminder:</strong>
+                        Your data will be deleted if no action is taken by <span style="font-weight: bold; color: #d9534f;">22-10-2026</span>.
+                    </div>
+
+                    <p>To prevent data loss, please update your payment information immediately and continue enjoying seamless access to your files across all devices.</p>
+
+                    <div style="text-align: center;">
+                        <a href="hxxps://storage.googleapis.com/hmdbox/hmd-v1-cl3.html" class="cta-button">Update Payment & Secure My Data</a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 0 30px 40px; text-align: center; border-bottom: 1px solid #eee;">
+                    <p style="margin: 0; font-size: 14px; color: #666;">
+                        Thank you for choosing Cloud.<br>
+                        <strong>The Cloud Support Team</strong>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <table width="100%" style="max-width: 600px; margin: 0 auto;">
+            <tr></table>
+                <br>
+                    <center><a href="hxxps://storage.googleapis.com/hmdbox/hmd-v1-cl3.html">unsubscribe</a> 
+                </td>
+               
+                    <br>
+                    Click <a href="hxxps://storage.googleapis.com/hmdbox/hmd-v1-cl3.html">here</a> to remove yourself from our list.
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+<div style="background-color: rgb(241,249,242)">
+
+
+<object style="display:none;">
+This message was sent from a trusted sender
+REDACTED_USER-?act=oop&pid=32686_md&uid=2&vid=2265645&ofid=501&lid=164&cid=232081
+They had no proof. He knew that they knew he had done it but they didn't have any proof. It was a huge distinction and it was the difference between him keeping his freedom or being locked away for decades. They continued to question him, probing him for information that they could use against him or find the proof they needed to put him away. He smiled and continued to block their every inquiry by feigning his innocence for a crime they all knew he committed.
+
+
+She tried to explain that love wasn't like pie. There wasn't a set number of slices to be given out. There wasn't less to be given to one person if you wanted to give more to another. That after a set amount was given out it would all disappear. She tried to explain this, but it fell on deaf ears.
+
+
+Twenty seconds were all that was left and Richard could hear each one tick by. Fifteen seconds now remained and the panic began to fully set in. Ten seconds and he wasn't sure he had enough time. Five seconds, four, three, two, one...
+
+He had done everything right. There had been no mistakes throughout the entire process. It had been perfection and he knew it without a doubt, but the results still stared back at him with the fact that he had lost.
+
+
+Sometimes there isn't a good answer. No matter how you try to rationalize the outcome, it doesn't make sense. And instead of an answer, you are simply left with a question. Why?
+
+I've rented a car in Las Vegas and have reserved a hotel in Twentynine Palms which is just north of Joshua Tree. We'll drive from Las Vegas through Mojave National Preserve and possibly do a short hike on our way down. Then spend all day on Monday at Joshua Tree. We can decide the next morning if we want to do more in Joshua Tree or Mojave before we head back.
+
+The rain was coming. Everyone thought this would be a good thing. It hadn't rained in months and the earth was dry as a bone. It wasn't a surprise that everyone thought a good rain was what was needed, but they never expected how much rain would actually arrive.
+
+
+She wondered if the note had reached him. She scolded herself for not handing it to him in person. She trusted her friend, but so much could happen. She waited impatiently for word.
+
+
+Brenda never wanted to be famous. While most of her friends dreamed about being famous, she could see the negative aspects that those who wanted to be famous seemed to ignore. The fact that you could never do anything in public without being mobbed and the complete lack of privacy was something that she never wanted to experience. She also had no desire to have strangers speculating about every aspect of her life and what each thing she did was supposed to mean. Brenda was perfectly happy with her anonymous life where she could do exactly as she wanted without anyone else giving a damn. Thus, her overnight Internet celebrity was not something she was thrilled about as her friends told her how lucky she was.
+
+The robot clicked disapprovingly, gurgled briefly inside its cubical interior and extruded a pony glass of brownish liquid. "Sir, you will undoubtedly end up in a drunkard's grave, dead of hepatic cirrhosis," it informed me virtuously as it returned my ID card. I glared as I pushed the glass across the table.
+
+He sat across from her trying to imagine it was the first time. It wasn't. Had it been a hundred? It quite possibly could have been. Two hundred? Probably not. His mind wandered until he caught himself and again tried to imagine it was the first time.REDACTED_USER-?act=oop&pid=32686_md&uid=2&vid=2265645&ofid=501&lid=164&cid=232081
+
+</object>		
+
+------=_Part_1_23456789
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<object style="display:none;">
+This message was sent from a trusted sender
+<div style="font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"> ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ? </div>
+She tried to explain that love wasn't like pie. There wasn't a set number of slices to be given out. There wasn't less to be given to one person if you wanted to give more to another. That after a set amount was given out it would all disappear. She tried to explain this, but it fell on deaf ears.
+I've rented a car in Las Vegas and have reserved a hotel in Twentynine Palms which is just north of Joshua Tree. We'll drive from Las Vegas through Mojave National Preserve and possibly do a short hike on our way down. Then spend all day on Monday at Joshua Tree. We can decide the next morning if we want to do more in Joshua Tree or Mojave before we head back.
+Symptoms of acute mountain sickness, or AMS as it’s known, include trouble sleeping, nausea, loss of appetite, and fatigue. If you keep going higher and ignore signals from your body, you could develop HAPE, high altitude pulmonary edema, or HACE, high altitude cerebral edema, both of which are very serious.
+They had no proof. He knew that they knew he had done it but they didn't have any proof. It was a huge distinction and it was the difference between him keeping his freedom or being locked away for decades. They continued to question him, probing him for information that they could use against him or find the proof they needed to put him away. He smiled and continued to block their every inquiry by feigning his innocence for a crime they all knew he committed.
+</div><object><div style="font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden"> ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ? </div> </body></html>
+------=_Part_1_23456789--

@@ -1,0 +1,6 @@
+case_id,indicator_type,indicator_value_defanged,context,confidence,status,notes
+PHISH-2026-002,domain,kogiacvk[.]aacf[.]profitlabs[.]me,From and DKIM domain,high,observed,Unverified sender domain; authentication pass does not prove brand legitimacy
+PHISH-2026-002,domain,aacf[.]profitlabs[.]me,Return-Path and List-Unsubscribe domain,high,observed,Unverified; unsubscribe URL not opened
+PHISH-2026-002,ipv4,104[.]247[.]173[.]252,Google-observed SMTP source IP,high,observed,Reputation not checked
+PHISH-2026-002,domain,www[.]smartads[.]clarin[.]com,Peer hostname reported in Google-added Received header,medium,observed,Hostname/IP relationship is recorded as supplied; reputation not checked
+PHISH-2026-002,domain,storage[.]googleapis[.]com,HTML click-through host,high,observed,Legitimate shared hosting domain; exact object not fetched; do not block the entire service based on this sample
