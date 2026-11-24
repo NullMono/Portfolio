@@ -127,6 +127,11 @@ The source addresses in the public report are anonymized. An IP address being ex
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── reports/
+|   ├── Failed_logins_by_IP.csv
+|   ├── Attacked_usernames.csv
+│   ├── ssh-authentication-incident-report.md
+│   └── ssh-authentication-incident-report.pdf
 ├── docs/
 │   ├── incident-report.md
 │   └── architecture.md
