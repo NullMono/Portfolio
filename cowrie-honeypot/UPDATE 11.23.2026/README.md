@@ -141,12 +141,6 @@ index=cowrie
 
 > Validate the event ID and field names against the actual Cowrie events in this Splunk deployment before relying on these searches. If the exported searches used additional filters, preserve those filters when reproducing the report.
 
-## Portfolio-safe disclosure
-
-The source IP addresses listed in this report are observed remote source addresses from the honeypot telemetry. They are included as indicators observed by the lab, not as verified identities or confirmed malicious organizations.
-
-Before publishing screenshots or configuration files, review them for unrelated sensitive information such as the honeypot's public IP address, private Tailscale addresses, SSH key paths, credentials, tokens, and personal account details. Do not publish private keys or passwords.
-
 ## Recommended next steps
 
 - Correlate the highest-volume source IPs with session timestamps and Cowrie session IDs, where available.
