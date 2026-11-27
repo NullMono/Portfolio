@@ -1,0 +1,37 @@
+name: atl-windows-desk
+services:
+  glpi:
+    image: glpi/glpi:latest
+    ports:
+      - "127.0.0.1:8080:80"
+    environment:
+      GLPI_DB_HOST: db
+      GLPI_DB_PORT: "3306"
+      GLPI_DB_NAME: glpi
+      GLPI_DB_USER: glpi_lab
+      GLPI_DB_PASSWORD: ${GLPI_DB_PASSWORD:?Set GLPI_DB_PASSWORD in .env}
+    volumes:
+      - glpi_data:/var/glpi
+    depends_on:
+      db:
+        condition: service_healthy
+    mem_limit: 2g
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in .env}
+      MYSQL_DATABASE: glpi
+      MYSQL_USER: glpi_lab
+      MYSQL_PASSWORD: ${GLPI_DB_PASSWORD:?Set GLPI_DB_PASSWORD in .env}
+    volumes:
+      - db_data:/var/lib/mysql
+    command: ["--innodb-buffer-pool-size=256M", "--max-connections=80"]
+    mem_limit: 1g
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$${MYSQL_PASSWORD}\" mysql -h 127.0.0.1 -u \"$${MYSQL_USER}\" \"$${MYSQL_DATABASE}\" -e 'SELECT 1' >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+volumes:
+  glpi_data:
+  db_data:
